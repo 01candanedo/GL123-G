@@ -1,0 +1,35 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+    font-size: 125px;
+}
+
+.separador{
+    word-spacing: 15px;
+    letter-spacing: 15px;
+}
+
+ol li a{
+    color: violet; 
+    font-size: 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.fondito{
+    background-image:url("css/imagenn.jpg");
+    width: 500px;
+    height: 500px;
+}
+.centrear{
+    text-align: center;
+    text-decoration: overline;
+
+}
