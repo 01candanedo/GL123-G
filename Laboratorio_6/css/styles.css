@@ -107,9 +107,10 @@ section {
 }
 
 .home-text h3 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
   margin-bottom: 48px;
+  text-align: justify;
 }
 
 .home-text h4 {
@@ -262,7 +263,7 @@ section {
 
 #Realeza {
   width: 100%;
-  
+
   transition: 0.8s;
   opacity: 1;
   color: #fff;
@@ -304,7 +305,7 @@ section {
   border-radius: 8px;
 }
 
-.more:hover{
+.more:hover {
   background: var(--main-color);
   color: var(--text-color);
 }
@@ -317,21 +318,18 @@ input.showmore {
   display: none;
 }
 
-input.showmore~label.more span.menos {
+input.showmore ~ label.more span.menos {
   display: none;
 }
 
-input.showmore:checked+.complete {
+input.showmore:checked + .complete {
   display: block;
 }
 
-input.showmore:checked~label.more span.mas {
+input.showmore:checked ~ label.more span.mas {
   display: none;
 }
 
-input.showmore:checked~label.more span.menos {
+input.showmore:checked ~ label.more span.menos {
   display: inline;
 }
-
-
-
