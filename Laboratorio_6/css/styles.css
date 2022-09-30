@@ -293,28 +293,45 @@ section {
   border-radius: 10px;
 }
 
-.readMore_btn{
-	background-color: #eb4a4a;
-	border:none;
-	border-radius: 40px;
-	color: #fff;
-	padding: 15px 32px;
-	font-size: 1.2em;
-	box-shadow: 0px 0px 10px 0px #eb4a4a;
-	cursor: pointer;
-	margin-top:10px;
+.more {
+  cursor: pointer;
+  background-color: #ccf;
+  color: var(--second-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  padding: 10px 25px;
+  margin: 0 2px;
+  border-radius: 8px;
 }
 
-.readMore_btn:hover{
-	box-shadow: none;
-	background-color: purple;
-	color: black;
+.more:hover{
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
-.hide{
-	display:none;
+.complete {
+  display: none;
 }
 
-.show{
-	display:block;
+input.showmore {
+  display: none;
 }
+
+input.showmore~label.more span.menos {
+  display: none;
+}
+
+input.showmore:checked+.complete {
+  display: block;
+}
+
+input.showmore:checked~label.more span.mas {
+  display: none;
+}
+
+input.showmore:checked~label.more span.menos {
+  display: inline;
+}
+
+
+
