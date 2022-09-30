@@ -165,6 +165,7 @@ a{
     font-weight: 500;
     line-height: 28px;
     margin: 0;
+    text-align: justify;
 }
 
 .about .intro ul.info {
