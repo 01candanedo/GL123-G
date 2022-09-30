@@ -24,6 +24,8 @@
 	--p-font: 14px;
 }
 
+
+
 body{
     color: #1a1a1a;
     background-color: var(--bg-color);
@@ -41,6 +43,10 @@ hr{
     background-image: linear-gradient(to right, #ccc, var(--bg-color), #ccc);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* Section - Header*/
 
@@ -56,6 +62,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    overflow:scroll;
 }
 
 .avatar{
