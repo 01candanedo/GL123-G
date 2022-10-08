@@ -1,0 +1,81 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0px, ;
+}
+
+header {
+    overflow: auto;
+}
+
+.logo {
+    height: 75px;
+    width: 10%;
+}
+
+.menu {
+    width: 100%;
+    list-style: none;
+}
+
+.f-l {
+    float: left;
+    background-color: rgb(0, 255, 255);
+}
+
+header img {
+    width: 15%;
+}
+
+header nav {
+    width: 60%;
+}
+
+header ul {
+    width: 15%;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.banner {
+    width: 100%;
+}
+
+.b {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    background-color: gray;
+}
+
+.icono {
+    padding: 15px;
+}
+
+.menu-item {
+    padding: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.menu-item a {
+    color: gray;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.sec {
+    background-color: gray;
+    height: 450px;
+}
+
+.sec2 {
+    width: 500px;
+    height: 450px;
+    float: left;
+    width: 33.33%;
+}
