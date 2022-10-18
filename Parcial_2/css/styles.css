@@ -145,10 +145,12 @@ ul.show {
   margin: 0;
   padding: 0;
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color-2);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
 }
 
 .slider {
@@ -159,7 +161,6 @@ ul.show {
 }
 
 .slides {
-  width: 500%;
   height: 500px;
   display: flex;
 }
@@ -200,7 +201,6 @@ ul.show {
 
 .navigation-manual {
   position: absolute;
-  width: 800px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -242,7 +242,7 @@ ul.show {
 .navigation-auto {
   position: absolute;
   display: flex;
-  width: 800px;
+  width: 100%;
   justify-content: center;
   margin-top: 460px;
 }
