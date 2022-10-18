@@ -173,12 +173,12 @@ ul.show {
   transition: 2s;
 }
 
-.textos-slider{
+.textos-slider {
   position: relative;
- background-color: var(--text-color-b-2);
- color: var(--text-color-w);
- top: -180px;
- padding: 20px;
+  background-color: var(--text-color-b-2);
+  color: var(--text-color-w);
+  top: -180px;
+  padding: 20px;
 }
 
 .textos-slider h1 {
@@ -297,7 +297,7 @@ ul.show {
 
 .group-swiper-slider--title-link h2 {
   color: var(--text-color-w);
-  font-size: 18px;
+  font-size: var(--h2-font);
 }
 
 .group-swiper-slider--title-link i {
@@ -313,6 +313,7 @@ ul.show {
 .group-swiper-slider-buttons button {
   background: none;
   border: none;
+  color: rgb(31, 31, 31);
 }
 
 .group-swiper-slider-buttons i {
@@ -320,20 +321,27 @@ ul.show {
   font-size: 2em;
 }
 
+.pre-btn,
+.nxt-btn {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.pre-btn:hover,
+.nxt-btn:hover {
+  transform: scale(1.1);
+  color: var(--text-color-w);
+}
+
 .swiper-product-container {
   display: flex;
-  overflow-x: auto;
   overflow: hidden;
   scroll-behavior: smooth;
 }
 
-.product-container::-webkit-scrollbar {
-  display: none;
-}
-
 .product-card {
   flex: 0 0 auto;
-  width: 250px;
+  width: 255px;
   height: 450px;
   margin-right: 40px;
 }
@@ -354,9 +362,9 @@ ul.show {
   padding: 5px;
   right: 10px;
   top: 10px;
-  text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--p-font);
+  text-transform: capitalize;
 }
 
 .product-thumb {
@@ -366,20 +374,18 @@ ul.show {
 }
 
 .card-btn {
+  background: var(--text-color-w);
   position: absolute;
   padding: 10px;
   bottom: 10px;
-  left: 50%;
+  left: 14px;
   width: 90%;
   border: none;
-  outline: none;
-  background: var(--text-color-w);
   border-radius: 5px;
   transition: 0.5s;
   cursor: pointer;
   opacity: 0;
   text-transform: capitalize;
-  transform: translateX(-50%);
 }
 
 .product-card:hover .card-btn {
@@ -405,26 +411,20 @@ ul.show {
   width: 100%;
   height: 20px;
   margin: 5px 0;
-  line-height: 20px;
-  overflow: hidden;
-  opacity: 0.5;
+  opacity: 0.6;
   text-transform: capitalize;
 }
 
 .price {
-  font-weight: 900;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: var(--h1-font);
 }
 
 .actual-price {
-  margin-left: 20px;
-  opacity: 0.5;
+  margin-left: var(--h2-font);
+  font-weight: 600;
+  opacity: 0.6;
   text-decoration: line-through;
-}
-
-.pre-btn,
-.nxt-btn {
-  cursor: pointer;
 }
 
 /* Section - Free Games */
@@ -547,7 +547,6 @@ ul.show {
 }
 
 .coming-soon-product-container .product-card {
-  flex: 0 0 auto;
   width: 100%;
   height: 450px;
   margin-bottom: 20px;
@@ -559,6 +558,16 @@ ul.show {
   height: 350px;
   overflow: hidden;
   border-radius: 8px;
+}
+
+.coming-soon-product-container .product-availability {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
 }
 
 /* Section - Contact */
@@ -577,26 +586,10 @@ ul.show {
   gap: 40px;
 }
 
-@media only screen and (max-width: 800px) {
-  /* For mobile phones: */
-  .contact-section {
-    padding: 0 10vw;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .contact-form form .send {
-    justify-content: center;
-    background: white;
-  }
-}
-
 .contact-text {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .contact-text h1 {
@@ -611,6 +604,7 @@ ul.show {
 .contact-text p {
   color: var(--second-color);
   font-size: var(--p-font);
+  font-weight: 500;
   margin-top: 20px;
   margin-bottom: 48px;
 }
@@ -662,9 +656,9 @@ ul.show {
 .contact-form form textarea {
   border: none;
   outline: none;
-  padding: 18px;
-  background: #12141c;
+  padding: var(--h2-font);
   color: var(--text-color-w);
+  background: var(--other-color);
   font-size: var(--p-font);
   font-weight: 600;
   border-radius: 8px;
@@ -677,11 +671,28 @@ ul.show {
 }
 
 .contact-form form .send {
-  font-size: 17px;
+  width: 180px;
   font-weight: 500;
-  background: var(--main-color);
+  font-size: var(--h2-font);
   color: var(--text-color-w);
-  width: 190px;
+  background: var(--main-color);
   transition: all 0.4s ease;
   cursor: pointer;
+}
+
+.contact-form form .send:hover {
+  width: 180px;
+  font-weight: 500;
+  font-size: var(--h2-font);
+  color: var(--text-color-w);
+  background: var(--main-color);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-section {
+    flex-direction: column;
+  }
 }
