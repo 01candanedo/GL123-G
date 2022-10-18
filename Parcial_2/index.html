@@ -10,33 +10,67 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	<script src="script/hamburguer.js"></script>
 </head>
 <body>
-    <!-- Navbar --> 
-	<nav class="menu">
-		<label for="" class="logo">CheapGames</label>
-		<ul class="menu_items">
-			<li class="active"><a href="#">Inicio</a></li>
-			<li><a href="#">Acerca</a></li>
-			<li><a href="#">Servicios</a></li>
-			<li><a href="#">Portafolio</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contacto</a></li>
-		</ul>
-		<span class="btn_menu">
-			<i class="fa fa-bars"></i>
-		</span>
-	</nav>
-	
-    <!---Principal Section--->
-	<section>
-		contenido
-	</section>
-	
+	<!---Principal section--->
+	<div class="Principal-section" id="Principal-section">
+		<header class="navbar">
+			<a href="#" class="logo">CheapGames</a>
+			<div class="menu-btn"></div>
+			<div class="navigation">
+				<div class="navigation-items">
+					<a href="#">Inicio</a>
+					<a href="#">Ofertas</a>
+					<a href="#">Gratis</a>
+					<a href="#">Proximamente</a>
+					<a href="#">Contacto</a>
+				</div>
+			</div>
+		</header>
+		<section class="home">
+			<img class="img-slide active" src="./img/gow-ragnarok.webp"></img>
+			<img class="img-slide" src="./img/spider-man_miles-morales.jpg"></img>
+			<img class="img-slide" src="./img/RocketLeague.jpg"></img>
+			<img class="img-slide" src="./img/red-dead-redemption-2.jpeg"></img>
+			<img class="img-slide" src="./img/modern-warfare-2.jpg"></img>
+			<div class="content active">
+				<h1>God of War<br><span>Ragnarok</span></h1>
+				<p>Atreus busca conocimiento que lo ayude a entender la profecía de "Loki" y establecer su rol en Ragnarök. Kratos debe decidir entre quedarse atado al miedo de repetir sus errores o librarse del pasado para ser el padre que Atreus necesita.</p>
+				<a href="#">Ver m&aacute;s</a>
+			</div>
+			<div class="content">
+				<h1>Spider-Man<br><span>Miles Morales</span></h1>
+				<p>El adolescente Miles Morales se adapta a su nuevo barrio al tiempo que sigue los pasos de Peter Parker, su mentor, para convertirse en un nuevo Spider-Man. Cuando la lucha de poderes amenaza con destruir su hogar, Miles debe tomar el relevo de Spider-Man y estar a la altura.</p>
+				<a href="#">Ver m&aacute;s</a>
+			</div>
+			<div class="content">
+				<h1>Rocket League<br></h1>
+				<p>Rocket League combina el fútbol de estilo arcade con el caos a cuatro ruedas, unos controles fáciles y una competición fluida y basada en la física.</p>
+				<a href="#">Ver m&aacute;s</a>
+			</div>
+			<div class="content">
+				<h1>Red Dead Redemption 2<br></h1>
+				<p>Con más de 175 premios al Juego del año y más de 250 valoraciones perfectas, Red Dead Redemption 2 es una historia épica sobre el honor y la lealtad en el umbral de una nueva era. Incluye Red Dead Redemption 2: Modo Historia y Red Dead Online.</p>
+				<a href="#">Ver m&aacute;s</a>
+			</div>
+			<div class="content">
+				<h1>COD<br><span>Modern Warfare 2</span></h1>
+				<p>Modern Warfare II conectará con la nueva experiencia de Warzone, que elevará el género Battle Royale al siguiente nivel con una nueva área de juego y un modo de terreno de pruebas. Prepárate para un calendario abarrotado de contenido poslanzamiento con nuevos mapas, modos, eventos de temporada, celebraciones de la comunidad y mucho más.</p>
+				<a href="#">Ver m&aacute;s</a>
+			</div>
+			<div class="slider-navigation">
+				<div class="nav-btn active"></div>
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+				<div class="nav-btn"></div>
+			</div>
+		</section>
+		<script src="./script/header-script.js"></script>
+	</div>
 
 	<!---Games on sale--->
-    <section class="games-on-sale" id="">
+    <section class="games-on-sale" id="games-on-sale">
 		<div class="carousel-swiper-slider">
 			<div class="group-swiper-slider-titlebar">
 				<div class="title">
@@ -373,6 +407,5 @@
 			</div>
 		</div>
 	</section>
-	
 </body>
 </html>
