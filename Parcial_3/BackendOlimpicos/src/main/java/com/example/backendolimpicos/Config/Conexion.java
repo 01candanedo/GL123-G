@@ -6,9 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
     public Connection openDb() {
-        LeerXML obj_leer = new LeerXML();
         try {
-            obj_leer.datosXML();
             String url = "jdbc:mariadb://localhost:3306/juegosdb";
 
             Class.forName("org.mariadb.jdbc.Driver");
