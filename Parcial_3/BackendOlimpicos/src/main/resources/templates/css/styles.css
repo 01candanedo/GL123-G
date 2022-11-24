@@ -1,0 +1,687 @@
+/* Section - Universal Values*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: rgb(18, 18, 18);
+  --bg-color-2: rgba(255, 255, 255, 0.1);
+  --text-color-w: #fff;
+  --text-color-b: black;
+  --text-color-b-2: rgba(0, 0, 0, 0.658);
+  --main-color: #eb4a4a;
+  --second-color: gray;
+  --other-color: #12141c;
+  --h1-font: 22px;
+  --h2-font: 18px;
+  --p-font: 16px;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color-w);
+}
+
+
+
+/* Section - Header/Principal Section */
+header{
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 15px 30vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+}
+
+header .logo{
+  color: var(--text-color-w);
+  font-size: var(--h1-font);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: var(--text-color-w);
+  font-size: var(--p-font);
+  font-weight: 500;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+header .navigation .navigation-items a:hover{
+  background: var(--main-color);
+}
+
+section{
+  padding: 100px 200px;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--main-color);
+}
+
+.home::before{
+  position: absolute;
+  z-index: 777;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000aa;
+}
+
+.home .content{
+  width: 80%;
+  z-index: 888;
+  margin-top: 30px;
+  color: var(--text-color-w);
+  display: none;
+  text-align: justify;
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1{
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.home .content h1 span{
+  font-weight: 500;
+}
+
+.home .content p{
+  margin-bottom: 35px;
+}
+
+.home .content a{
+  background: var(--text-color-w);
+  padding: 15px 30px;
+  color: var(--main-color);
+  font-size: var(--h2-font);
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.home img{
+  position: absolute;
+  z-index: 000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation{
+  position: relative;
+  z-index: 888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transform: translateY(80px);
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid;
+  border-radius: 50%;
+  border-color: var(--text-color-w);
+  background: var(--text-color-w);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn.active{
+  background: var(--main-color);
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}
+
+.img-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.img-slide.active{
+  clip-path: circle(150% at 0 50%);
+}
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation.active .navigation-items{
+    background: var(--text-color-w);
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  header .navigation .navigation-items a{
+    color: var(--text-color-b);
+    font-size: var(--h2-font);
+    margin: 20px;
+  }
+
+  .menu-btn{
+    background: url(../img/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .menu-btn.active{
+    z-index: 999;
+    background: url(../img/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+
+  .home .content h1{
+    font-size: 55px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 560px){
+  .home .content h1{
+    font-size: 40px;
+  }
+}
+
+
+
+/* Section - Games on Sale */
+.games-on-sale {
+  background: var(--main-color);
+  color: var(--text-color-w);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.carousel-swiper-slider {
+  padding: 0 10vw;
+  margin-bottom: 40px;
+}
+
+.group-swiper-slider-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.group-swiper-slider--title-link h2 {
+  color: var(--text-color-w);
+  font-size: var(--h2-font);
+}
+
+.group-swiper-slider--title-link i {
+  margin-left: 10px;
+  font-size: var(--p-font);
+}
+
+.group-swiper-slider-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.group-swiper-slider-buttons button {
+  background: none;
+  border: none;
+  color: rgb(31, 31, 31);
+}
+
+.group-swiper-slider-buttons i {
+  margin-left: 10px;
+  font-size: 2em;
+}
+
+.pre-btn,
+.nxt-btn {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.pre-btn:hover,
+.nxt-btn:hover {
+  transform: scale(1.1);
+  color: var(--text-color-w);
+}
+
+.swiper-product-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.game-card {
+  flex: 0 0 auto;
+  width: 255px;
+  height: 450px;
+  margin-right: 40px;
+}
+
+.game-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.discount-tag {
+  position: absolute;
+  background: var(--text-color-w);
+  color: var(--main-color);
+  border-radius: 5px;
+  padding: 5px;
+  right: 10px;
+  top: 10px;
+  font-weight: 600;
+  font-size: var(--p-font);
+  text-transform: capitalize;
+}
+
+.game-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-btn {
+  background: var(--text-color-w);
+  position: absolute;
+  padding: 10px;
+  bottom: 10px;
+  left: 14px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+  text-transform: capitalize;
+}
+
+.game-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: var(--main-color);
+  color: var(--text-color-w);
+}
+
+.game-info {
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.game-name {
+  text-transform: uppercase;
+}
+
+.game-short-description {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+  opacity: 0.6;
+  text-transform: capitalize;
+}
+
+.price {
+  font-weight: 700;
+  font-size: var(--h1-font);
+}
+
+.actual-price {
+  margin-left: var(--h2-font);
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+
+
+/* Section - Free Games */
+.free-games {
+  background: var(--bg-color-2);
+  color: var(--text-color-w);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.load-more-section {
+  padding: 0 10vw;
+  margin-bottom: 40px;
+}
+
+.group-load-more-section-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.group-load-more--title-link h2 {
+  color: var(--text-color-w);
+  font-size: 18px;
+}
+
+.group-load-more--title-link i {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.load-more .btn {
+  margin: 0 2px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border-color: white;
+  color: var(--text-color-w);
+  background: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: var(--p-font);
+}
+
+.load-more .btn:hover {
+  background: var(--main-color);
+  color: var(--text-color-w);
+  border: none;
+}
+
+.load-more-product-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.load-more-product-container .game-card {
+  display: none;
+  width: 100%;
+  height: 450px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.load-more-product-container .game-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.load-more-product-container .game-card:nth-child(1),
+.load-more-product-container .game-card:nth-child(2),
+.load-more-product-container .game-card:nth-child(3),
+.load-more-product-container .game-card:nth-child(4) {
+  display: inline-block;
+}
+
+
+
+/* Section - Comming Soon */
+.coming-soon {
+  background: var(--bg-color);
+  color: var(--text-color-w);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.coming-soon-section {
+  padding: 0 10vw;
+  margin-bottom: 40px;
+}
+
+.group-coming-soon-section-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.group-coming-soon--title-link h2 {
+  color: var(--text-color-w);
+  font-size: 18px;
+}
+
+.group-coming-soon--title-link i {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.coming-soon-product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  gap: 25px;
+}
+
+.coming-soon-product-container .game-card {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 20px;
+}
+
+.coming-soon-product-container .game-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.coming-soon-product-container .game-availability {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+
+
+
+/* Section - Contact */
+.contact {
+  background: var(--bg-color);
+  color: var(--text-color-w);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.contact-section {
+  padding: 0 10vw;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+}
+
+.contact-text h1 {
+  font-size: var(--h1-font);
+  margin-bottom: 10px;
+}
+
+.contact-text h2 {
+  font-size: var(--h2-font);
+}
+
+.contact-text p {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 48px;
+}
+
+.contact-list {
+  margin-bottom: 48px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list li a {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.contact-list li a:hover {
+  color: var(--main-color);
+}
+
+.contact-icons i {
+  height: 40px;
+  width: 40px;
+  background: #12141c;
+  border-radius: 8px;
+  color: var(--main-color);
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: all 0.4s ease;
+}
+
+.contact-icons i:hover {
+  color: var(--text-color-w);
+  background: var(--main-color);
+  transform: scale(1.01) translateY(-5px);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  border: none;
+  outline: none;
+  padding: var(--h2-font);
+  color: var(--text-color-w);
+  background: var(--other-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 200px;
+}
+
+.contact-form form .send {
+  width: 180px;
+  font-weight: 500;
+  font-size: var(--h2-font);
+  color: var(--text-color-w);
+  background: var(--main-color);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.contact-form form .send:hover {
+  width: 180px;
+  font-weight: 500;
+  font-size: var(--h2-font);
+  color: var(--text-color-w);
+  background: var(--main-color);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-section {
+    flex-direction: column;
+  }
+}
